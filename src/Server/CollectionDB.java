@@ -41,7 +41,7 @@ public class CollectionDB {
         pr.close();
         if (!id){
             Statement statement = connection.createStatement();
-            ResultSet rs = statement.executeQuery("SELECT * FROM " + collTable+" WHERE \"name\" ='"+city.getNameCity()+"'");
+            ResultSet rs = statement.executeQuery("SELECT * FROM " + collTable+" WHERE name ='"+city.getNameCity()+"'");
             rs.next();
             city.setId(rs.getLong(1));
         }
@@ -74,7 +74,7 @@ public class CollectionDB {
     public static String clearDB(String user) throws SQLException {
         Statement statement=connection.createStatement();
         StringBuilder sb=new StringBuilder();
-        statement.executeUpdate("DELETE FROM "+collTable+" WHERE \"login\" ='"+user+"'");
+        statement.executeUpdate("DELETE FROM "+collTable+" WHERE login ='"+user+"'");
         ResultSet rs=statement.executeQuery("SELECT * FROM "+collTable);
         while(rs.next()){
             sb.append(rs.getString(2)+":id-"+rs.getLong(1)).append("\n");
@@ -84,8 +84,9 @@ public class CollectionDB {
     }
      public static void removeIDBD(Long id,String user) throws SQLException {
         Statement statement=connection.createStatement();
-        ResultSet rs=statement.executeQuery("SELECT \"login\" FROM "+collTable+" WHERE id ='"+id+"'");
+        ResultSet rs=statement.executeQuery("SELECT login FROM "+collTable+" WHERE id ='"+id+"'");
         rs.next();
+         System.out.println(rs.getString("login"));
         if(!rs.getString("login").equals(user)) throw new SQLException("Извините, вы не имеете прав для удаления этого объекта");
         statement.executeUpdate("DELETE FROM "+collTable+ " WHERE id = '"+id+"'");
         statement.close();
@@ -93,8 +94,8 @@ public class CollectionDB {
     public static String removeMASLBD(Integer meters_above_sea_level, String user) throws SQLException {
         Statement statement=connection.createStatement();
         StringBuilder sb=new StringBuilder();
-        statement.execute("DELETE FROM "+collTable+" WHERE metersabovesealevel ='"+meters_above_sea_level+"'AND \"login\" = '"+user+"'");
-        ResultSet rs=statement.executeQuery("SELECT * FROM "+collTable+" WHERE metersabovesealevel ='"+meters_above_sea_level+"'AND \"login\" != '"+user+"'");
+        statement.execute("DELETE FROM "+collTable+" WHERE metersabovesealevel ='"+meters_above_sea_level+"'AND login = '"+user+"'");
+        ResultSet rs=statement.executeQuery("SELECT * FROM "+collTable+" WHERE metersabovesealevel ='"+meters_above_sea_level+"'AND login != '"+user+"'");
         while(rs.next()){
             sb.append(rs.getString(2)+":id-"+rs.getLong(1)).append("\n");
         }
@@ -107,9 +108,7 @@ public class CollectionDB {
         if(rs.next()){
             if (!rs.getString("login").equals(city.getUser()))  throw new SQLException("Извините, вы не имеете прав для замены этого объекта");
         else{
-                System.out.println(50);
             removeIDBD(id,city.getUser());
-                System.out.println(40);
             insertColl(city,true,city.getUser());
         }
         }

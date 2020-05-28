@@ -55,21 +55,6 @@ public class City implements Serializable {
             else this.government = Government.valueOf(args.get(8));
             this.governor = new Human(args.get(9));
         }
-        else if (args.size()==11){
-            this.id=Long.parseLong(args.get(0));
-            this.name = args.get(1);
-            this.coordinates = new Coordinates(new ArrayList<>(args.subList(2, 4)));
-            this.creationDate = LocalDateTime.now();
-            this.area = Double.parseDouble(args.get(5));
-            this.population = Integer.parseInt(args.get(6));
-            this.metersAboveSeaLevel = Integer.parseInt(args.get(7));
-            this.capital = Boolean.parseBoolean(args.get(8));
-            if (args.get(9) == null) this.climate = null;
-            else this.climate = Climate.valueOf(args.get(9));
-            if (args.get(10) == null) this.government = null;
-            else this.government = Government.valueOf(args.get(10));
-            this.governor = new Human(args.get(11));
-        }
         else if (args.size()==12){
             this.id=Long.parseLong(args.get(0));
             this.name = args.get(1);

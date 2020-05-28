@@ -1,7 +1,6 @@
 package Server.Commands;
 
 import Client.CommandObject;
-import Server.Collection.CityObjects;
 import Server.Collection.CollectWorker;
 import Server.Collection.ControlUnit;
 
@@ -13,7 +12,6 @@ import java.util.logging.Logger;
  * Класс команды show-вывод элементов коллекции
  */
 public class ShowCommand implements Command {
-    private CityObjects send=new CityObjects();
     CollectWorker coll;
     static Logger LOGGER;
     /**

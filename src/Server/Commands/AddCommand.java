@@ -35,10 +35,8 @@ public class AddCommand implements Command {
     @Override
     public String execute(CommandObject user) throws IOException, SQLException {
         LOGGER.log(Level.INFO,"Отправка результата выполнения команды на сервер");
-        System.out.println(user.getArgs().size());
         City city=new City(user.getArgs());
         city.setUser(user.getLogin());
-        System.out.println(city.toString());
         CollectionDB.insertColl(city,false,user.getLogin());
         coll.add(city);
         return "Команда add выполнена. Элемент добавлен в коллекцию, введите команду \"show\", чтобы увидеть содержимое коллекции";

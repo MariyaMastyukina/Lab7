@@ -45,8 +45,6 @@ public class ControlUnit {
                 lastCommands.remove(numberCommand);
             }
             numberCommand++;
-            System.out.println(lastCommands);
-
             return answer;
 
         } catch (IndexOutOfBoundsException e) {

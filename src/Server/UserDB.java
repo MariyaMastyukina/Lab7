@@ -20,7 +20,6 @@ public class UserDB {
 
     public static String check_in(String login, char[] password) throws SQLException, NoSuchAlgorithmException {
         PreparedStatement ps=connection.prepareStatement("SELECT login FROM "+userTable);
-        System.out.println("70");
         ResultSet rs=ps.executeQuery();
         while(rs.next()){
             if(login.equals(rs.getString("login"))) return "Пользователен с таким логином уже зарегистрирован";

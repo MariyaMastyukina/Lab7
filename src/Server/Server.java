@@ -109,8 +109,8 @@ public class Server {
                     if (selectionKey.isWritable()) {
                             SocketChannel channel=(SocketChannel)selectionKey.channel();
                             LOGGER.log(Level.INFO, "Запуск полученный от клиента команды");
-                            String result=handleRequest.invoke(new Launch(collection,currentCommand,cu));
-                            while(result==null){}
+                        System.out.println(currentCommand.getNameCommand());
+                            String result=handleRequest.submit(new Launch(collection,currentCommand,cu)).get();
                             new SendResponse(channel).sendResponse(result);
 //                            res.put(selectionKey,handleRequest.submit());
 //                            if (res.containsKey(selectionKey)&&res.get(selectionKey).isDone()){
@@ -124,7 +124,7 @@ public class Server {
                     if (selectionKey.isReadable()) {
                         SocketChannel channel=(SocketChannel) selectionKey.channel();
                         LOGGER.log(Level.INFO, "Чтение полученной от клиента команды");
-                        currentCommand=readRequest.invoke(new ReadRequest(channel));
+                        currentCommand=readRequest.submit(new ReadRequest(channel)).get();
                         selectionKey.interestOps(SelectionKey.OP_WRITE);
 
                     }
@@ -142,6 +142,9 @@ public class Server {
                     ioServer.writeln("Работа с текущем клиентом закончена. Ожидается подключение нового клиента");
                     clientConnection.sscClose();
                     clientConnection.connect(Integer.parseInt(args[0]));
+                    collection=new CollectWorker(collectionDB.loadListFromDB());
+                } catch (InterruptedException | ExecutionException e) {
+                    e.printStackTrace();
                 }
             }
         }
