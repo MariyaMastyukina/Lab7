@@ -14,7 +14,7 @@ import java.util.concurrent.RecursiveTask;
 /**
  * Класс, который обрабатывает ввод команд с консоли
  */
-public class Launch extends RecursiveTask<String> {
+public class Launch implements Callable<String> {
     private CommandObject command;
     private ControlUnit pusk;
     /**
@@ -41,17 +41,15 @@ public class Launch extends RecursiveTask<String> {
         Command check_in=new CheckInCommand(pusk);
     }
 
-
     @Override
-    protected String compute() {
+    public String call() throws Exception {
+        String answer= null;
         try {
-            String answer=pusk.executeCommand(command.getNameCommand(), command);
-            return answer;
+            answer = pusk.executeCommand(command.getNameCommand(), command);
         } catch (IOException e) {
             e.printStackTrace();
-            return null;
         }
-    }
+        return answer;    }
 }
 
 

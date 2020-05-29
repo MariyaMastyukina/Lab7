@@ -37,9 +37,7 @@ public class CommandObject implements Serializable {
                 checker = validator.isValidation();
                 if (checker) {
                     nameCommand = lineParts[0];
-                    System.out.println(nameCommand);
                     option = lineParts[1];
-                    System.out.println(option);
                 }
             } else {
                 Validation validator = new Validation(line, null);

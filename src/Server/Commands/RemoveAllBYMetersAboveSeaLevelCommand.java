@@ -34,7 +34,10 @@ public class RemoveAllBYMetersAboveSeaLevelCommand implements Command {
         LOGGER.log(Level.INFO,"Отправка результата выполнения команды на сервер");
         String result=CollectionDB.removeMASLBD(Integer.parseInt(user.getOption()),user.getLogin());
         String answer=coll.remove_by_meters_above_sea_level(Integer.parseInt(user.getOption()),user.getLogin());
-        if(!result.isEmpty()) return "Команда remove_all_by_meters_above_sea_level выполнена, но вы не смогли удалить следующие объекты из-за отказа в доступе:\n"+result;
+
+        if(!result.isEmpty()) {
+            return "Команда remove_all_by_meters_above_sea_level выполнена, но вы не смогли удалить следующие объекты из-за отказа в доступе:\n"+result;
+        }
         return answer;
     }
 }

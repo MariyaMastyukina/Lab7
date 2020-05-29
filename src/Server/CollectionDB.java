@@ -82,14 +82,17 @@ public class CollectionDB {
         statement.close();
         return sb.toString();
     }
-     public static void removeIDBD(Long id,String user) throws SQLException {
+     public static String removeIDBD(Long id,String user) throws SQLException {
         Statement statement=connection.createStatement();
         ResultSet rs=statement.executeQuery("SELECT login FROM "+collTable+" WHERE id ='"+id+"'");
         rs.next();
-         System.out.println(rs.getString("login"));
-        if(!rs.getString("login").equals(user)) throw new SQLException("Извините, вы не имеете прав для удаления этого объекта");
+        if(!rs.getString("login").equals(user)) {
+            statement.close();
+            return "Извините, вы не имеете прав для удаления этого объекта";
+        }
         statement.executeUpdate("DELETE FROM "+collTable+ " WHERE id = '"+id+"'");
-        statement.close();
+         statement.close();
+         return null;
     }
     public static String removeMASLBD(Integer meters_above_sea_level, String user) throws SQLException {
         Statement statement=connection.createStatement();
@@ -102,16 +105,20 @@ public class CollectionDB {
         statement.close();
         return sb.toString();
     }
-    public static void UpdateIDDB(long id,City city) throws SQLException {
+    public static String UpdateIDDB(long id,City city) throws SQLException {
         Statement statement=connection.createStatement();
         ResultSet rs=statement.executeQuery("SELECT * FROM "+collTable+" WHERE id = '"+id+"'");
         if(rs.next()){
-            if (!rs.getString("login").equals(city.getUser()))  throw new SQLException("Извините, вы не имеете прав для замены этого объекта");
+            if (!rs.getString("login").equals(city.getUser())) {
+                statement.close();
+                return "Извините, вы не имеете прав для замены этого объекта";
+            }
         else{
             removeIDBD(id,city.getUser());
             insertColl(city,true,city.getUser());
         }
         }
         statement.close();
+        return null;
     }
 }

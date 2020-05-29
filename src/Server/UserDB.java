@@ -32,7 +32,6 @@ public class UserDB {
         ps.setString(3,salt);
         ps.execute();
         ps.close();
-        System.out.println(60);
         return "Пользователь "+login+" зарегистрирован";
     }
     public static String getSalt(){

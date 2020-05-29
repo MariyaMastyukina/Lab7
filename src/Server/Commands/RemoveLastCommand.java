@@ -33,9 +33,15 @@ public class RemoveLastCommand implements Command {
     public String execute(CommandObject user) throws IOException, SQLException {
         LOGGER.log(Level.INFO,"Отправка результата выполнения команды на сервер");
         if (coll.getSize()!=0){
-            CollectionDB.removeIDBD(coll.get_id_last(),user.getLogin());
-        coll.remove_last(user.getLogin());
-        return "Команда remove_last выполнена. Последний элемент коллекции удален";
+            long id=coll.get_id_last(user.getLogin());
+            if (id!=0) {
+                CollectionDB.removeIDBD(id, user.getLogin());
+                coll.remove_last(user.getLogin());
+                return "Команда remove_last выполнена. Последний элемент коллекции удален";
+            }
+            else{
+                return "Команда remove_last не выполнена, так как вы не создали ни один объект";
+            }
     }
         else {
             return "Команда remove_last не выполнена. Коллекция пуста, удаление невозможно";

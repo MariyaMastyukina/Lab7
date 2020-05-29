@@ -34,15 +34,21 @@ public class UpdateCommand implements Command {
     @Override
     public String execute(CommandObject CO) throws IOException, SQLException {
         System.out.println(CO.getArgs().size());
+        String checker = null;
         long id = Long.parseLong(CO.getOption());
         for (City city : coll.getCollection()) {
             if (city.getIdOfCity() == id) {
                 City newcity = new City(CO.getArgs());
                 newcity.setId(id);
                 newcity.setUser(CO.getLogin());
-                CollectionDB.UpdateIDDB(id, newcity);
-                coll.update(newcity, CO.getLogin());
-                return "Команда update выполнена. Значение элемента коллекции с id " + Integer.parseInt(CO.getOption()) + " обновлено, введите команду \"show\", чтобы увидеть содержимое коллекции";
+                checker = CollectionDB.UpdateIDDB(id, newcity);
+                if (checker == null) {
+                    coll.update(newcity, CO.getLogin());
+                    return "Команда update выполнена. Значение элемента коллекции с id " + Integer.parseInt(CO.getOption()) + " обновлено, введите команду \"show\", чтобы увидеть содержимое коллекции";
+                }
+            }
+            else{
+                return checker;
             }
         }
         return "Элемента с таким id нет. Введите команду \"show\", чтобы увидеть элементы коллекции и их id.";

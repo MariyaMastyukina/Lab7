@@ -27,17 +27,16 @@ import java.util.logging.Logger;
 public class Server {
     private static ControlUnit cu=new ControlUnit();
     private static ForkJoinPool readRequest=ForkJoinPool.commonPool();
-    private static ForkJoinPool handleRequest= ForkJoinPool.commonPool();
+    private static ExecutorService handleRequest= Executors.newCachedThreadPool();
     static Logger LOGGER;
-//    private static String URL="jdbc:postgresql://pg/studs";
-    private static String URL="jdbc:postgresql://localhost:5432/test1";
-//    private static String login="s285598";
-    private static String login="postgres";
-//    private static String password="phn768";
-    private static String password="270212";
+    private static String URL="jdbc:postgresql://pg/studs";
+//    private static String URL="jdbc:postgresql://localhost:5432/test1";
+    private static String login="s285598";
+//    private static String login="postgres";
+    private static String password="phn768";
+//    private static String password="270212";
     public static void main(String[] args) throws IOException, ClassNotFoundException, SQLException {
         ClientConnection clientConnection = null;
-        CommandObject currentCommand = null;
         IOInterfaceStream ioServer=new IOTerminal(System.in,System.out);
         LOGGER=Logger.getLogger(Server.class.getName());
         Integer PORT=Integer.parseInt(args[0]);
@@ -60,7 +59,8 @@ public class Server {
             PORT++;
             clientConnection.connect(PORT);
         }
-        HashMap<SelectionKey, CommandObject> res = new HashMap<>();
+        HashMap<SelectionKey,Future<CommandObject>>to=new HashMap<>();
+        HashMap<SelectionKey,Future<String>>res=new HashMap<>();
         DBConnection dbConnection=new DBConnection();
         CollectionDB collectionDB=null;
         UserDB userDB=null;
@@ -109,22 +109,23 @@ public class Server {
                     if (selectionKey.isWritable()) {
                             SocketChannel channel=(SocketChannel)selectionKey.channel();
                             LOGGER.log(Level.INFO, "Запуск полученный от клиента команды");
-                        System.out.println(currentCommand.getNameCommand());
-                            String result=handleRequest.submit(new Launch(collection,currentCommand,cu)).get();
-                            new SendResponse(channel).sendResponse(result);
-//                            res.put(selectionKey,handleRequest.submit());
-//                            if (res.containsKey(selectionKey)&&res.get(selectionKey).isDone()){
-//                                System.out.println(res.get(selectionKey).get());
-//                                new SendResponse(channel).sendResponse(res.get(selectionKey).get());
-//                                res.remove(selectionKey);
+                            if (to.containsKey(selectionKey)&&to.get(selectionKey).isDone()){
+                                res.put(selectionKey,handleRequest.submit(new Launch(collection,to.get(selectionKey).get(),cu)));
+                                to.remove(selectionKey);
+                            }
+                            if (res.containsKey(selectionKey)&&res.get(selectionKey).isDone()) {
+                                new SendResponse(channel).sendResponse(res.get(selectionKey).get());
+                                res.remove(selectionKey);
                                 LOGGER.log(Level.INFO, "Ответ отправлен клиенту");
                                 selectionKey.interestOps(SelectionKey.OP_READ);
+                            }
+
                             }
 
                     if (selectionKey.isReadable()) {
                         SocketChannel channel=(SocketChannel) selectionKey.channel();
                         LOGGER.log(Level.INFO, "Чтение полученной от клиента команды");
-                        currentCommand=readRequest.submit(new ReadRequest(channel)).get();
+                        to.put(selectionKey,readRequest.submit(new ReadRequest(channel)));
                         selectionKey.interestOps(SelectionKey.OP_WRITE);
 
                     }
@@ -143,7 +144,9 @@ public class Server {
                     clientConnection.sscClose();
                     clientConnection.connect(Integer.parseInt(args[0]));
                     collection=new CollectWorker(collectionDB.loadListFromDB());
-                } catch (InterruptedException | ExecutionException e) {
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } catch (ExecutionException e) {
                     e.printStackTrace();
                 }
             }

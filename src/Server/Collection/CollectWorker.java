@@ -43,7 +43,9 @@ public class CollectWorker {
      * Функция удаления последнего элемента коллекции
      */
     public void remove_last(String user) throws SQLException {
-        remove_by_id(get_id_last(),user);
+        if (get_id_last(user)!=0) {
+            remove_by_id(get_id_last(user), user);
+        }
     }//для remove_last
 
     /**
@@ -212,10 +214,10 @@ public class CollectWorker {
             }
         }
     }
-    public long get_id_last(){
+    public long get_id_last(String user){
         long max=0;
         for (City c:collection){
-            if (c.getIdOfCity()>max){
+            if (c.getIdOfCity()>max&&c.getUser().equals(user)){
                 max=c.getIdOfCity();
             }
         }

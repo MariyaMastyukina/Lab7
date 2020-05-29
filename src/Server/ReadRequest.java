@@ -31,7 +31,6 @@ public class ReadRequest extends RecursiveTask<CommandObject> {
                 return (CommandObject) object;
             }
             catch(IOException | ClassNotFoundException e){
-                CollectWorker.end_clear();
                 new ControlUnit().clearListCommand();
                 System.out.println("Соединение с клиентом разорвано :(");
                 try {

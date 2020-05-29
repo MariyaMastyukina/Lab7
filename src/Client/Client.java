@@ -18,7 +18,6 @@ public class Client {
         if (args.length == 2) {
             LOGGER.log(Level.INFO,"Подключение к серверу");
             serverConnection.connection(args[0], args[1]);
-            ioClient.writeln("Здравстуйте! Введите \"help\", чтобы увидеть список доступных команд");
         } else {
             LOGGER.log(Level.INFO,"Ошибка в соединении с сервером, неверный хост, порт");
             ioClient.writeln("введите корректный хост и порт");
@@ -30,15 +29,20 @@ public class Client {
         LOGGER.log(Level.INFO,"Получаем спсиок команд с сервера");
         TransferObject transferObject = new TransferObject(ioServer, ioClient, serverConnection);
         User user= User.createUser(ioClient,ioServer);
+        ioClient.writeln("Здравстуйте! Введите \"help\", чтобы увидеть список доступных команд");
         ioClient.writeln("Введите команду");
         LOGGER.log(Level.INFO,"Считываем команду с консоли");
-        String line;
         while(true) {
             try {
-                line = ioClient.readLine();
                 CommandObject command;
-                while (true) {
-                    LOGGER.log(Level.INFO, "Создаем объект текущей команды");
+               String  line = ioClient.readLine();
+                LOGGER.log(Level.INFO, "Создаем объект текущей команды");
+                    if (line.equals("exit")){
+                        user=User.createUser(ioClient,ioServer);
+                        ioClient.writeln("Здравстуйте! Введите \"help\", чтобы увидеть список доступных команд");
+                        ioClient.writeln("Введите команду");
+                        continue;
+                    }
                     command = new CommandObject(line, null);
                     command.setLogin(user.getLogin());
                     command.setPassword(user.getPassword());
@@ -52,8 +56,6 @@ public class Client {
                     }
                     ioClient.writeln("Введите команду");
                     LOGGER.log(Level.INFO, "Считываем команду с консоли");
-                    line = ioClient.readLine();
-                }
             } catch (NullPointerException e) {
                 ioClient.writeln("Введите команду еще раз");
             }
