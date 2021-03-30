@@ -1,5 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="053d921d-438d-45ab-99ae-d3004e03b1c1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/lab7.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/CommandObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/DataUtils/CommandObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/IOInterfaceStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/IOClient/IOInterfaceStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/IOTerminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/IOClient/IOTerminal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/ServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/ConnectionUtils/ServerConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/TransferObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/DataUtils/TransferObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/Validation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/DataUtils/Validation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/ClientConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/ConnectionUtils/ClientConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Collection/AreaComparartor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Comparators/AreaComparartor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Collection/CityComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Comparators/CityComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Collection/CollectWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Launch/CollectWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Collection/ControlUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Launch/ControlUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Collection/NameComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Comparators/NameComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/CollectionDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/DBUtils/CollectionDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/AddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Commands/AddCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/CheckInCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Commands/CheckInCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/ClearCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Commands/ClearCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Commands/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/ExitCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Commands/ExitCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/GroupCountingByPopulationCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Commands/GroupCountingByPopulationCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/HelpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Commands/HelpCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/HistoryCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Commands/HistoryCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/InfoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Commands/InfoCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/PrintAscendingCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Commands/PrintAscendingCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/RemoveAllBYMetersAboveSeaLevelCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Commands/RemoveAllBYMetersAboveSeaLevelCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/RemoveByIdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Commands/RemoveByIdCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/RemoveLastCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Commands/RemoveLastCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/ShowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Commands/ShowCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/SignInCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Commands/SignInCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/SortCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Commands/SortCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/UpdateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Commands/UpdateCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/DBUtils/DBConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Launch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Launch/Launch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/ReadRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/ConnectionUtils/ReadRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/SendResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/ConnectionUtils/SendResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/UserDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/DBUtils/UserDB.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -7,7 +57,44 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProjectId" id="1qTmVKN9b8bf7Gz7NHRECnWNSMN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="053d921d-438d-45ab-99ae-d3004e03b1c1" name="Default Changelist" comment="" />
+      <created>1617111977365</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1617111977365</updated>
+      <workItem from="1617111979434" duration="367000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
