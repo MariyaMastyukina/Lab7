@@ -1,6 +1,7 @@
-package Server;
+package Server.DBUtils;
 
 import Server.Collection.City;
+import Server.Server;
 
 import java.sql.*;
 import java.util.ArrayList;

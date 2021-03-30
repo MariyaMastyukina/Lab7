@@ -1,5 +1,7 @@
-package Client;
+package Client.DataUtils;
 
+import Client.ConnectionUtils.ServerConnection;
+import Client.IOClient.IOInterfaceStream;
 import Server.Collection.Climate;
 import Server.Collection.Government;
 

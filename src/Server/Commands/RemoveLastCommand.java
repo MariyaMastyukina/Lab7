@@ -1,9 +1,9 @@
 package Server.Commands;
 
-import Client.CommandObject;
-import Server.Collection.CollectWorker;
-import Server.Collection.ControlUnit;
-import Server.CollectionDB;
+import Client.DataUtils.CommandObject;
+import Server.Launch.CollectWorker;
+import Server.Launch.ControlUnit;
+import Server.DBUtils.CollectionDB;
 
 import java.io.IOException;
 import java.sql.SQLException;

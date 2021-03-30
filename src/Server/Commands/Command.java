@@ -1,6 +1,6 @@
 package Server.Commands;
 
-import Client.CommandObject;
+import Client.DataUtils.CommandObject;
 
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;

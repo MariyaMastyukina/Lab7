@@ -1,4 +1,6 @@
-package Client;
+package Client.ConnectionUtils;
+
+import Client.Client;
 
 import java.io.IOException;
 import java.io.InputStream;

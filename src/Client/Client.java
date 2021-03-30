@@ -1,5 +1,11 @@
 package Client;
 
+import Client.ConnectionUtils.ServerConnection;
+import Client.DataUtils.CommandObject;
+import Client.DataUtils.TransferObject;
+import Client.IOClient.IOInterfaceStream;
+import Client.IOClient.IOTerminal;
+
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;

@@ -1,10 +1,9 @@
-package Client;
+package Client.DataUtils;
 
 import Server.Collection.Climate;
 import Server.Collection.Government;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;

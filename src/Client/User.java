@@ -1,5 +1,8 @@
 package Client;
 
+import Client.DataUtils.CommandObject;
+import Client.IOClient.IOInterfaceStream;
+
 import java.io.Console;
 import java.io.IOException;
 
@@ -10,7 +13,7 @@ public class User {
         this.login=login;
         this.password=password;
     }
-    public static User createUser(IOInterfaceStream ioUser,IOInterfaceStream ioServer) throws IOException {
+    public static User createUser(IOInterfaceStream ioUser, IOInterfaceStream ioServer) throws IOException {
         boolean permission=false;
         String login="";
         char[]password=null;

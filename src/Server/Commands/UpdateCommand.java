@@ -1,10 +1,10 @@
 package Server.Commands;
 
-import Client.CommandObject;
+import Client.DataUtils.CommandObject;
 import Server.Collection.City;
-import Server.Collection.CollectWorker;
-import Server.Collection.ControlUnit;
-import Server.CollectionDB;
+import Server.Launch.CollectWorker;
+import Server.Launch.ControlUnit;
+import Server.DBUtils.CollectionDB;
 
 import java.io.IOException;
 import java.sql.SQLException;

@@ -1,15 +1,10 @@
-package Server;
+package Server.Launch;
 
-import Client.*;
-import Server.Collection.*;
-import Server.Collection.CollectWorker;
-import Server.Collection.ControlUnit;
+import Client.DataUtils.CommandObject;
 import Server.Commands.*;
 
 import java.io.IOException;
-import java.util.List;
 import java.util.concurrent.Callable;
-import java.util.concurrent.RecursiveTask;
 
 /**
  * Класс, который обрабатывает ввод команд с консоли

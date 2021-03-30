@@ -1,5 +1,7 @@
 
-package Client;
+package Client.DataUtils;
+
+import Client.Client;
 
 import java.util.*;
 

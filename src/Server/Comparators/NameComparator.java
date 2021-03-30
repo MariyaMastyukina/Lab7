@@ -1,4 +1,6 @@
-package Server.Collection;
+package Server.Comparators;
+
+import Server.Collection.City;
 
 import java.util.Comparator;
 

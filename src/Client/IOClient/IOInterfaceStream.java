@@ -1,9 +1,11 @@
-package Client;
+package Client.IOClient;
+
+import Client.Client;
 
 import java.io.IOException;
 
 /**
- * {@code Client.IOInterfaceStream} содержит команды потока ввода/вывода
+ * {@code Client.IOClient.IOInterfaceStream} содержит команды потока ввода/вывода
  */
 public interface IOInterfaceStream {
     /**

@@ -1,8 +1,8 @@
 package Server.Commands;
 
-import Client.CommandObject;
-import Server.Collection.ControlUnit;
-import Server.UserDB;
+import Client.DataUtils.CommandObject;
+import Server.Launch.ControlUnit;
+import Server.DBUtils.UserDB;
 
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;

@@ -1,6 +1,6 @@
-package Server.Collection;
+package Server.Launch;
 
-import Client.CommandObject;
+import Client.DataUtils.CommandObject;
 import Server.Commands.Command;
 
 import java.io.IOException;
