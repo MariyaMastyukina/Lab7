@@ -1,23 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="053d921d-438d-45ab-99ae-d3004e03b1c1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_h2database_h2_1_4_200.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Server/DBUtils/CityDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Server/DBUtils/UserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Utils/ConnectionUtils/ServerConnectionUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Utils/DataUtils/CommandUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab7.iml" beforeDir="false" afterPath="$PROJECT_DIR$/lab7.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/ConnectionUtils/ServerConnection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/DataUtils/CommandObject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/DataUtils/TransferObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/DataUtils/TransferUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/DataUtils/Validation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/DataUtils/ValidationUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/IOClient/IOInterfaceStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Client/IOClient/IOInterfaceStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/IOClient/IOTerminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Client/IOClient/IOTerminal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/UserUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Collection/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Collection/City.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Collection/Climate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Collection/Climate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Collection/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Collection/Coordinates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Collection/Government.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Collection/Government.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Collection/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Collection/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/AddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Commands/AddCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/CheckInCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Commands/CheckInCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/ClearCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Commands/ClearCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Commands/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/ExitCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Commands/ExitCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/GroupCountingByPopulationCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Commands/GroupCountingByPopulationCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/HelpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Commands/HelpCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/HistoryCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Commands/HistoryCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/InfoCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/PrintAscendingCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Commands/PrintAscendingCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/RemoveAllBYMetersAboveSeaLevelCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Commands/RemoveAllBYMetersAboveSeaLevelCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/RemoveByIdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Commands/RemoveByIdCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/RemoveLastCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Commands/RemoveLastCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/ShowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Commands/ShowCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/SignInCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Commands/SignInCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/SortCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Commands/SortCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Commands/UpdateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Commands/UpdateCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Comparators/AreaComparartor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Comparators/AreaComparartor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Comparators/CityComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Comparators/CityComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Comparators/NameComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Comparators/NameComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/ConnectionUtils/ClientConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/ConnectionUtils/ClientConnectionUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/ConnectionUtils/ReadRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/ConnectionUtils/ReadRequestUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/ConnectionUtils/SendResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/ConnectionUtils/SendResponseUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/DBUtils/CollectionDB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/DBUtils/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/DBUtils/DBConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/DBUtils/UserDB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Launch/CollectWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Launch/CityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Launch/ControlUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Launch/ControlUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Launch/Launch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Launch/Launch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
-      </MavenGeneralSettings>
-    </option>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1qTmVKN9b8bf7Gz7NHRECnWNSMN" />
   <component name="ProjectViewState">
@@ -26,10 +89,30 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -40,6 +123,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617111977365</updated>
       <workItem from="1617111979434" duration="367000" />
+      <workItem from="1637167332453" duration="15120000" />
     </task>
     <servers />
   </component>
