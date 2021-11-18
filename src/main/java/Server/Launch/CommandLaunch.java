@@ -9,14 +9,14 @@ import java.util.concurrent.Callable;
 /**
  * Класс, который обрабатывает ввод команд с консоли
  */
-public class Launch implements Callable<String> {
+public class CommandLaunch implements Callable<String> {
     private CommandUtils commandUtils;
     private ControlUnit controlUnit;
 
     /**
      * Конструктор создания команд
      */
-    public Launch(CityService cityService, CommandUtils commandUtils, ControlUnit controlUnit) throws IOException {
+    public CommandLaunch(CityService cityService, CommandUtils commandUtils, ControlUnit controlUnit) throws IOException {
         this.controlUnit = controlUnit;
         this.commandUtils = commandUtils;
         initCommands(cityService, controlUnit);

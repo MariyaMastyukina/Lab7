@@ -1,7 +1,6 @@
 package Utils.ConnectionUtils;
 
-import Client.IOClient.IOInterfaceStream;
-import Server.Server;
+import IO.IOInterfaceStream;
 
 import java.io.IOException;
 import java.net.BindException;
@@ -10,7 +9,6 @@ import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
-import java.util.logging.Level;
 
 /**
  * Класс, отвечающий за соединение сервера с клиентом

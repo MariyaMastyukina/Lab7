@@ -2,7 +2,7 @@ package Server.Commands;
 
 import Utils.DataUtils.CommandUtils;
 import Server.Launch.ControlUnit;
-import Server.DBUtils.UserDAO;
+import Utils.DBUtils.UserDAO;
 
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;

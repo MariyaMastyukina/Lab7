@@ -1,4 +1,4 @@
-package Server.DBUtils;
+package Utils.DBUtils;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

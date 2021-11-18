@@ -1,7 +1,7 @@
 package Utils;
 
 import Utils.DataUtils.CommandUtils;
-import Client.IOClient.IOInterfaceStream;
+import IO.IOInterfaceStream;
 
 import java.io.Console;
 import java.io.IOException;

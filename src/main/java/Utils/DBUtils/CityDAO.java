@@ -1,4 +1,4 @@
-package Server.DBUtils;
+package Utils.DBUtils;
 
 import Server.Collection.*;
 

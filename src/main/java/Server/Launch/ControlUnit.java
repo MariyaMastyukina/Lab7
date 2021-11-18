@@ -58,10 +58,7 @@ public class ControlUnit {
 
         } catch (IndexOutOfBoundsException e) {
             return null;
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-            return null;
-        } catch (SQLException e) {
+        } catch (NoSuchAlgorithmException | SQLException e) {
             e.printStackTrace();
             return null;
         }

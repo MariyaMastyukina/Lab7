@@ -4,7 +4,7 @@ import Server.Collection.City;
 import Server.Comparators.AreaComparartor;
 import Server.Comparators.CityComparator;
 import Server.Comparators.NameComparator;
-import Server.DBUtils.CityDAO;
+import Utils.DBUtils.CityDAO;
 
 import java.sql.SQLException;
 import java.util.*;

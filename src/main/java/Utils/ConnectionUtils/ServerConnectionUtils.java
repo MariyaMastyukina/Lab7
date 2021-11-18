@@ -1,6 +1,6 @@
 package Utils.ConnectionUtils;
 
-import Client.IOClient.IOInterfaceStream;
+import IO.IOInterfaceStream;
 
 import java.io.IOException;
 import java.io.InputStream;

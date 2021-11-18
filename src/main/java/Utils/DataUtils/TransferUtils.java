@@ -1,6 +1,6 @@
 package Utils.DataUtils;
 
-import Client.IOClient.IOInterfaceStream;
+import IO.IOInterfaceStream;
 import Utils.AppUtils;
 import Utils.ConnectionUtils.ServerConnectionUtils;
 
