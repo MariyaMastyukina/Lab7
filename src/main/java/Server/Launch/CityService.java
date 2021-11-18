@@ -1,6 +1,6 @@
 package Server.Launch;
 
-import Server.Collection.City;
+import Server.Model.City;
 import Server.Comparators.AreaComparartor;
 import Server.Comparators.CityComparator;
 import Server.Comparators.NameComparator;

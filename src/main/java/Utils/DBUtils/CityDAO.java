@@ -1,6 +1,6 @@
 package Utils.DBUtils;
 
-import Server.Collection.*;
+import Server.Model.*;
 
 import java.sql.*;
 import java.util.List;

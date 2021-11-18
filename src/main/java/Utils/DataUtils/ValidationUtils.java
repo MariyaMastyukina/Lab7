@@ -1,9 +1,6 @@
 
 package Utils.DataUtils;
 
-import Server.Collection.Climate;
-import Server.Collection.Government;
-
 import java.util.*;
 
 /**

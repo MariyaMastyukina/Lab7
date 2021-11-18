@@ -1,6 +1,6 @@
 package Server.Commands;
 
-import Server.Collection.*;
+import Server.Model.*;
 import Utils.DataUtils.CommandUtils;
 import Server.Launch.CityService;
 import Server.Launch.ControlUnit;
